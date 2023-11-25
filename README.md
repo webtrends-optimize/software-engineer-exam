@@ -7,7 +7,7 @@ In as simple a way as possible, we wish to evaluate your ability to grasp the fu
 
 You should download and run the application provided, and then conduct the exam where you look to modify the application in the manner requested.
 
-For an experienced developer, we do not expect this to take more than 15 minutes of your time, which we hope is a fair investment in our potential working together.
+For an experienced developer, we do not expect this to take more than 5 minutes of your time, which we hope is a fair investment in our potential working together. For a junior developer with React experience, we feel 15-20 minutes should be adequate.
 
 ## Expected Deliverable/s
 
