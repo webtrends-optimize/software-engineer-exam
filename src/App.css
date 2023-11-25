@@ -1,0 +1,21 @@
+body {
+    background: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+label {
+    display: block; 
+    margin-bottom: 10px;
+}
+
+label > span {
+    width: 200px;
+    display: inline-block;
+}
+
+input[type="text"] {
+    width: 150px;
+}
