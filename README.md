@@ -9,6 +9,10 @@ You should download and run the application provided, and then conduct the exam 
 
 For an experienced developer, we do not expect this to take more than 15 minutes of your time, which we hope is a fair investment in our potential working together.
 
+## Expected Deliverable/s
+
+Please fork this repository, apply your changes as per the task below, and send back your updated repository.
+
 ## The task
 
 ### 1. Dynamically creating elements 
