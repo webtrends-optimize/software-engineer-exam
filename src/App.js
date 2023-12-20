@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { New } from './components/new';
 
 const fields = [
     { name: "field_name", label: "Name", type: "text" },
@@ -74,20 +75,24 @@ class App extends React.Component {
         
         return (
 
-            <div>
+            <>
+                <div>
+                    <h1>Webtrends Optimize Software Engineer exam</h1>
 
-                <h1>Webtrends Optimize Software Engineer exam</h1>
-                <form onSubmit={handleSubmit}>
-                    {this.state.userList.map((user, index) =>  ( 
-                        <div key={index} className='userSection'>
-                            {addUsers(user, index)}
+                    <form onSubmit={handleSubmit}>
+                        {this.state.userList.map((user, index) => (
+                            <div key={index} className='userSection'>
+                                {addUsers(user, index)}
 
-                        </div>
+                            </div>
 
-                    ))}
-                </form>
-                <button onClick={()=>this.handleAddUser()}>Add User</button>
-            </div>
+                        ))}
+                    </form>
+                    <button onClick={() => this.handleAddUser()}>Add User</button>
+                </div>
+                
+                <New text={"hello"}/>
+            </>
         );
     }
 }
