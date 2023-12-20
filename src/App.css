@@ -7,15 +7,20 @@ body {
 }
 
 label {
-    display: block; 
+    display: block;
     margin-bottom: 10px;
 }
 
-label > span {
+label>span {
     width: 200px;
     display: inline-block;
 }
 
 input[type="text"] {
     width: 150px;
+}
+
+.userSection {
+    flex-direction: row;
+    display: flex;
 }
