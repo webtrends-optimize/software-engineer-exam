@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createRef} from "react";
 import "./App.css";
 
 const fields = [
@@ -8,11 +8,39 @@ const fields = [
 ];
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.inputRef = fields.reduce((acc, field) => {
+      acc[field.name] = createRef();
+      return acc;
+    }, {});
+
+    this.state = {
+      newText: "hello"
+    }
+  }
+
+  handleLabelClick = (fieldname) => {
+    this.inputRef[fieldname].current.focus();
+  };
+
   render() {
     return (
       <div>
         <h1>Webtrends Optimize Software Engineer exam</h1>
-        <form></form>
+        <form>
+          {fields.map((field, index) => (
+            <div key={index}>
+              <label htmlFor={field.name}>{field.label}</label>
+              <input
+                type={field.type}
+                name={field.name}
+                id={field.name}
+              />
+            </div>
+          ))}
+        </form>
       </div>
     );
   }
