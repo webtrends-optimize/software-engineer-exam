@@ -1,5 +1,6 @@
 import React, {createRef} from "react";
 import "./App.css";
+import New from "../src/components/new"
 
 const fields = [
   { name: "field_name", label: "Name", type: "text" },
@@ -41,6 +42,8 @@ class App extends React.Component {
             </div>
           ))}
         </form>
+
+        <New  text={this.state.newText} />
       </div>
     );
   }
