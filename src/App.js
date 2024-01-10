@@ -26,6 +26,9 @@ class App extends React.Component {
     this.inputRef[fieldname].current.focus();
   };
 
+  handleTextChange = () => {
+    this.setState({ newText: "world" });
+  }
   render() {
     return (
       <div>
@@ -33,17 +36,20 @@ class App extends React.Component {
         <form>
           {fields.map((field, index) => (
             <div key={index}>
-              <label htmlFor={field.name}>{field.label}</label>
+              <label onClick={() => this.handleLabelClick(field.name)}>
+                {field.label}
+              </label>
               <input
+                ref={this.inputRef[field.name]}
+                id={field.name}
                 type={field.type}
                 name={field.name}
-                id={field.name}
               />
             </div>
           ))}
         </form>
 
-        <New  text={this.state.newText} />
+        <New  text={this.state.newText}  onclick={this.handleTextChange}/>
       </div>
     );
   }
